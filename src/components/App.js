@@ -16,8 +16,14 @@ function App() {
   const [newlyAddedHog, setNewlyAddedHog] = useState(hogs);
 
   function handleDisplayBarHog(animal) {
+    // const numberOfSameHighestMedal = hogDisplayBar.filter((e) => {
+    //   return e['highest medal achieved'] === animal['highest medal achieved']
+    // });
+
     if (!hogDisplayBar.some((e) => e.name === animal.name)) {
-      sethogDisplayBar([...hogDisplayBar, animal]);
+      // if (numberOfSameHighestMedal.length === 0) {
+        sethogDisplayBar([...hogDisplayBar, animal]);
+      // }
     }
     /*
     this will put in everything that is not already inside and add the item in
@@ -62,7 +68,7 @@ function App() {
         if (hog1.greased > hog2.greased) return -1;
         else if (hog1.greased < hog2.greased) return 1;
         else { return 0 }
-      } 
+      }
       else if (sortBy === 'weight') {
         return hog1.weight - hog2.weight
 
